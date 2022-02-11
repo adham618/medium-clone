@@ -52,7 +52,6 @@ export default function NextImage({
         alt={alt}
         onLoadingComplete={() => setStatus('complete')}
         layout='responsive'
-        draggable="false"
         {...rest}
       />
     </figure>
