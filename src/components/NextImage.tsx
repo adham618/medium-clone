@@ -10,9 +10,9 @@ type NextImageProps = {
   alt: string;
   width: string | number;
 } & (
-  | { width: string | number; height: string | number }
-  | { layout: 'fill'; width?: string | number; height?: string | number }
-) &
+    | { width: string | number; height: string | number }
+    | { layout: 'fill'; width?: string | number; height?: string | number }
+  ) &
   ImageProps;
 
 /**
@@ -52,6 +52,7 @@ export default function NextImage({
         alt={alt}
         onLoadingComplete={() => setStatus('complete')}
         layout='responsive'
+        draggable="false"
         {...rest}
       />
     </figure>
