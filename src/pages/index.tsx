@@ -18,8 +18,7 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-white'>
-        </section>
+        <section className='bg-white'></section>
       </main>
     </Layout>
   );
