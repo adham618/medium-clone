@@ -8,7 +8,7 @@ const defaultMeta = {
   title: 'Medium Clone',
   siteName: 'Medium Clone',
   description:
-    'Medium Clone Usign NextJS && TypeScript && Tailwind-CSS && Sanity-CMS',
+    'Medium Clone Using NextJS && TypeScript && Tailwind-CSS && Sanity-CMS',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',

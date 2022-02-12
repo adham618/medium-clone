@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Medium Clone Usign NextJS && TypeScript && Tailwind-CSS && Sanity-CMS.
+Medium Clone Using NextJS && TypeScript && Tailwind-CSS && Sanity-CMS.
 
 ## Codebase
 
