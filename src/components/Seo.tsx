@@ -5,8 +5,8 @@ import { openGraph } from '@/lib/helper';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Medium Clone',
-  siteName: 'Medium Clone',
+  title: 'Medium',
+  siteName: 'Medium',
   description:
     'Medium Clone Using NextJS && TypeScript && Tailwind-CSS && Sanity-CMS',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
