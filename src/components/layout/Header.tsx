@@ -1,31 +1,26 @@
-import * as React from 'react';
+import Link from "next/link"
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from "../NextImage"
 
-const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
-];
-
-export default function Header() {
+const Header = () => {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
-        </UnstyledLink>
-        <nav>
-          <ul className='flex items-center justify-between space-x-4'>
-            {links.map(({ href, label }) => (
-              <li key={`${href}${label}`}>
-                <UnstyledLink href={href} className='hover:text-gray-600'>
-                  {label}
-                </UnstyledLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+    <header className="flex justify-between p-5 max-w-7xl mx-auto">
+      <div className="flex items-center space-x-5">
+        <Link href="/" passHref>
+          <NextImage className="cursor-pointer" src="/svg/medium-logo.svg" width={130} height={40} alt="logo" draggable="false" />
+        </Link>
+
+        <div className="hidden md:inline-flex items-center item space-x-5">
+          <h3>About</h3>
+          <h3>Contact</h3>
+          <h3 className="text-white bg-green-600 rounded-full px-4 py-1 cursor-pointer">Follow</h3>
+        </div>
+      </div>
+      <div className="flex items-center space-x-5 text-green-600">
+        <h3 className="cursor-pointer">Sign In</h3>
+        <h3 className="border cursor-pointer hover:bg-green-600  hover:text-white px-4 py-1 rounded-full border-green-600">Get Started</h3>
       </div>
     </header>
-  );
+  )
 }
+export default Header
