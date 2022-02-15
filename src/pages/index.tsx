@@ -1,9 +1,17 @@
 import * as React from 'react';
+import { Post } from 'typing';
+
+import { sanityClient } from '@/lib/sanitycms/sanity.server';
 
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
+interface HomePageProps {
+  posts: [Post]
+}
 
-export default function HomePage() {
+export default function HomePage({ posts }: HomePageProps) {
+  // eslint-disable-next-line no-console
+  console.log(posts)
   return (
     <div className='max-w-7xl mx-auto'>
       <Seo templateTitle='Home' />
@@ -28,4 +36,27 @@ export default function HomePage() {
       </main>
     </div>
   );
+}
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == "post"]{
+  _id,
+  title,
+  author=>{
+  name,
+  image
+},
+description,
+mainImage,
+slug
+}`;
+  const posts = await sanityClient.fetch(query)
+  if (!posts) {
+    return {
+      notFound: true,
+    }
+  }
+  return {
+    props: { posts }
+  }
 }
