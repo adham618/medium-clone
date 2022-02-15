@@ -1,13 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
-
-import NextImage from "../NextImage"
 
 const Header = () => {
   return (
     <header className="flex justify-between p-5 max-w-7xl mx-auto">
       <div className="flex items-center space-x-5">
         <Link href="/" passHref>
-          <NextImage className="cursor-pointer" src="/svg/medium-logo.svg" width={130} height={40} alt="logo" draggable="false" />
+          <img className="cursor-pointer w-32 object-contain" src="/svg/medium-logo.svg" alt="logo" draggable="false" />
         </Link>
 
         <div className="hidden md:inline-flex items-center item space-x-5">
