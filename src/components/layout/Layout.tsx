@@ -4,8 +4,10 @@ import Header from './Header';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   // Put Header or Footer Here
-  return <>
-    <Header />
-    {children}
-  </>
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }
