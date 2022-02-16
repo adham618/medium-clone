@@ -2,8 +2,8 @@
 
 ## Preview
 
-![screenshot-2](https://user-images.githubusercontent.com/88515844/153203836-78dca78e-73fa-973-908f-cfe1cf8014df.png)
-![screenshot](https://user-images.githubusercontent.com/88515844/153203847-e38a508d-1887-4db-abc0-e896a7002e58.png)
+![screenshot (1)](https://user-images.githubusercontent.com/88515844/154291805-b3db9d4c-1386-4f9f-8a76-bee245ba60e6.png)
+![screenshot2](https://user-images.githubusercontent.com/88515844/154291796-c1f2eaa4-3e64-4a1b-a52c-87f78b776886.png)
 
 ## **[Live Demo](https://foodo-landing-page-avy.vercel.app/)**
 
@@ -33,14 +33,13 @@ Medium Clone Using NextJS && TypeScript && Tailwind-CSS && Sanity-CMS.
 
 ```sh
 ├── src                                # Src Folder
-    ├── common                         # Common Folder
-        ├── components                 # Reusabble parts
-            ├── Feed                   # Feed component
-            ├── Header                 # Header component
-            ├── Modal                  # Modal component
+    ├── components                     # Reusabble parts
+        ├── Layout                     # layout component
+    ├── lib                            # lib Folder
     ├── styles                         # styles Folder
     ├── pages                          # Application views
         ├── api                        # API Folder
+        ├── post                        # post pages
 ```
 
 ## Setup
