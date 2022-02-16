@@ -5,7 +5,7 @@
 ![screenshot (1)](https://user-images.githubusercontent.com/88515844/154291805-b3db9d4c-1386-4f9f-8a76-bee245ba60e6.png)
 ![screenshot2](https://user-images.githubusercontent.com/88515844/154291796-c1f2eaa4-3e64-4a1b-a52c-87f78b776886.png)
 
-## **[Live Demo](https://foodo-landing-page-avy.vercel.app/)**
+## **[Live Demo](https://medium-clone-black.vercel.app/)**
 
 ## Introduction
 
