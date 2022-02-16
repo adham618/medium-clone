@@ -23,6 +23,8 @@ Medium Clone Using NextJS && TypeScript && Tailwind-CSS && Sanity-CMS.
 
 - **Sanity-CMS**: Headless CMS
 
+- **React-Hook-Form**: Validate Forms In React
+
 - **Prettier**: Code formatter
 
 - **Eslint**: Linter

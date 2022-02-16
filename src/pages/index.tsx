@@ -1,6 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import Link from 'next/link';
 import * as React from 'react';
 import { Post } from 'typing';
 
+import { urlFor } from '@/lib/sanitycms/sanity';
 import { sanityClient } from '@/lib/sanitycms/sanity.server';
 
 import NextImage from '@/components/NextImage';
@@ -10,8 +14,6 @@ interface HomePageProps {
 }
 
 export default function HomePage({ posts }: HomePageProps) {
-  // eslint-disable-next-line no-console
-  console.log(posts)
   return (
     <div className='max-w-7xl mx-auto'>
       <Seo templateTitle='Home' />
@@ -32,8 +34,28 @@ export default function HomePage({ posts }: HomePageProps) {
         </div>
         <NextImage layout='intrinsic' className='hidden pr-11 md:inline-flex h-32 lg:h-full' src="/svg/medium-1.svg" width={300} height={400} alt="logo" draggable="false" />
       </section>
-      <main>
-      </main>
+      {/* Posts */}
+      <section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 p-2 md:p-6'>
+        {posts.map(post => (
+          <Link href={`/post/${post.slug.current}`} key={post._id} passHref>
+            <div className="border rounded-lg group cursor-pointer overflow-hidden">
+              <NextImage
+                priority
+                className=' w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-out'
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                src={urlFor(post.mainImage).url()!}
+                width={200} height={140} alt="post-img" />
+              <div className="flex justify-between p-5 bg-white">
+                <div>
+                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="text-xs">{post.description} by {post.author.name}</p>
+                </div>
+                <img src={urlFor(post.author.image).url()!} alt="author-img" className='h-12 w-12 rounded-full' draggable="false" />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
     </div>
   );
 }
@@ -42,7 +64,7 @@ export const getServerSideProps = async () => {
   const query = `*[_type == "post"]{
   _id,
   title,
-  author=>{
+  author->{
   name,
   image
 },
