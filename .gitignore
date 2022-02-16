@@ -38,4 +38,4 @@ robots.txt
 sitemap.xml
 
 # Sanity-CMS
-/mediumcms/
+/mediumcms/node_modules
